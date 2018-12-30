@@ -9,6 +9,7 @@
   src: url("../fonts/Trebuc.ttf") format('truetype');
   font-family: 'Trebuchet MS';
 }
+
 body {
   font-family: Open Sans, Arial, sans-serif;
   min-height: 100vh;
@@ -16,15 +17,19 @@ body {
   color: #848484;
   padding: 220px 0 0 0;
 }
+
 h1 {
   font-size: 30px;
 }
+
 h2 {
   font-size: 22px;
 }
+
 ul {
   list-style: none;
 }
+
 h1, h2, h3, h4 {
   color: #696161;
 }
@@ -35,18 +40,22 @@ a {
 
 a:hover {
   color: red;
+  text-decoration: underline;
 }
-.holder::after {/*для того чтоб не схлопывался родитель*/
+
+.holder::after { /*для того чтоб не схлопывался родитель*/
   content: '';
   display: block;
   clear: both;
 }
+
 img {
- width: auto;
+  width: auto;
   max-width: 100%;
 }
+
 header {
-  position: fixed;/**/
+  position: fixed; /*для того чтоб навигация была видна при прокрутке*/
   width: 100%; /* поскольку вырвался из потока то он займет ширину контента*/
   top: 0;
   left: 0;
@@ -55,20 +64,26 @@ header {
   padding-top: 30px;
   background-color: white;
 }
+
 .wrapper {
   width: 1024px;
   margin: 0 auto;
 }
+
 header a.logo {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 51px;
   color: #313131;
 }
+
+header a.logo:hover {
+  text-decoration: none;
+}
+
 header a.logo span {
   color: #595959;
-
-  /*position: relative;/*для того чтобы зеленый кружок перепривязался к span*/
 }
+
 header a.logo span::after {
   content: '';
   display: inline-block;
@@ -76,31 +91,124 @@ header a.logo span::after {
   height: 29px;
   background-color: #6dd025;
   border-radius: 50%;
-  /*position: absolute;/*чтобы вытащить из потока и наложить зеленый кружок на о*/
-  /*right: 0;
-  top: 20px;*/
   position: relative;
   right: 4px;
   top: 2px;
 }
+
 header nav {
   float: right;
   padding-top: 15px;
 }
+
 header nav a {
   display: inline-block;
   font-size: 23px;
-  color: #333333;
+  color: #323232;
   margin-left: 6px;
   padding: 0 20px;
   transition: all 0.3s;
   line-height: 36px;
 }
+
 header nav a:hover {
   background-color: #373737;
   text-decoration: none;
-  color: #FFFFFF;
+  color: white;
 }
+
 .banner {
   text-align: center;
+  padding-bottom: 80px;
+}
+
+aside {
+  float: right;
+
+}
+
+aside a {
+  display: block;
+  margin-bottom: 12px;
+}
+
+main {
+  padding-right: 321px;
+  /*margin-right: 321px;*/
+}
+
+main section img {
+  float: left;
+  margin: 0 30px 30px 0;
+}
+
+.top-saction {
+  overflow: hidden;
+}
+
+.top-article {
+  padding-right: 24px;
+}
+
+.top-article h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.top-article h2 a {
+  color: #696161;
+}
+
+.top-article p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.mini-article {
+  float: left;
+  width: 33.3%;
+  padding-right: 22px;
+  margin-bottom: 24px;
+}
+
+.mini-article h3 {
+  margin: 0;
+  font-size: 22px;
+
+}
+
+.mini-article div.sub-heading {
+  padding: 10px 0;
+  font-size: 14px;
+  overflow: hidden; /*все что вылазиет за див прячет за троеточие*/
+  text-overflow: ellipsis;
+  white-space: nowrap; /*чтобы было в одну строку если не влазиет*/
+}
+
+.mini-article p {
+  text-align: justify;
+  line-height: 22px;
+
+
+}
+
+.footer div,
+.footer div a {
+  text-align: center;
+  background-color: #313131;
+  height: 90px;
+  color: white;
+  padding-top: 25px;
+  font-size: 16px;
+}
+
+.footer-social {
+  float: right;
+  margin-right: 100px;
+}
+
+.footer-social img {
+  width: 30px;
+  border-radius: 5px;
+  margin: 0 5px;
 }
